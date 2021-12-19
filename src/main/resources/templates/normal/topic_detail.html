@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	  th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8">
+	<title>Topic Details</title>
+</head>
+<body>
+<section>
+<div class = "container">
+	<div class = "row">
+		<h2 class="text-center"> Topic List </h2>
+	</div>
+
+	<table class = "table table-striped table table-bordered">
+		<thead class = "table-dark">
+		<tr>
+			<th>Topic Name</th>
+			<th>Topic Description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each = "topic: ${topics}">
+			<td><span th:text="${topic.topicName}"></span></td>
+			<td><span th:text="${topic.topicDesc}"></span></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+</section>
+</body>
+</html>
