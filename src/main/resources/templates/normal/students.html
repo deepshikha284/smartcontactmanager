@@ -21,6 +21,7 @@
                         <tr>
                             <th> Student First Name </th>
                             <th> Student Last Name </th>
+                            <th> Address </th>
                             <th> Student Email </th>
                             <th> Actions </th>
                         </tr>
@@ -30,6 +31,7 @@
                         <tr th:each = "student: ${students}">
                             <td th:text = "${student.firstName}"></td>
                             <td th:text = "${student.lastName}"></td>
+                            <td th:text = "${student.email}"></td>
                             <td th:text = "${student.email}"></td>
                             <td>
                                 <a th:href = "@{/students/edit/{id}(id=${student.id})}"
