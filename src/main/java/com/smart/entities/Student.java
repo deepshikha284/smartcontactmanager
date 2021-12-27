@@ -20,6 +20,9 @@ public class Student {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "address")
+    private String address;
+
     @Column(name = "email")
     private String email;
 
@@ -33,10 +36,11 @@ public class Student {
     public Student() {
     }
 
-    public Student(String firstName, String lastName, String email) {
+    public Student(String firstName, String lastName, String email, String address) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
+        this.address = address;
         this.email = email;
     }
 
@@ -86,5 +90,13 @@ public class Student {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

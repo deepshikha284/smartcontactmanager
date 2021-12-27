@@ -73,6 +73,7 @@ public class StudentController {
         existingStudent.setId(id);
         existingStudent.setFirstName(student.getFirstName());
         existingStudent.setLastName(student.getLastName());
+        existingStudent.setAddress(student.getAddress());
         existingStudent.setEmail(student.getEmail());
 
         studentService.updateStudent(existingStudent);
