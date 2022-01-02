@@ -53,6 +53,10 @@
                                 placeHolder="Enter Student email"
                         />
                     </div>
+                    <div class="form-group">
+                        <input id="genderMale" type="radio" name="genderMale" th:value="male" th:field="*{gender}"> Male
+                        <input id="genderFemale" type="radio" name="genderFemale" th:value="female" th:field="*{gender}"> Female
+                    </div>
                     <div class="box-footer">
                         <button type="submit" class="btn btn-primary">
                             Submit

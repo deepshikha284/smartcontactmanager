@@ -26,6 +26,9 @@ public class Student {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "gender")
+    private String gender;
+
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Course> courses = new ArrayList<>();
 
@@ -36,12 +39,13 @@ public class Student {
     public Student() {
     }
 
-    public Student(String firstName, String lastName, String email, String address) {
+    public Student(String firstName, String lastName, String email, String address, String gender) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.email = email;
+        this.gender = gender;
     }
 
     public long getId() {
@@ -98,5 +102,13 @@ public class Student {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
