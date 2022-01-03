@@ -23,6 +23,7 @@
                             <th> Student Last Name </th>
                             <th> Address </th>
                             <th> Student Email </th>
+                            <th> Gender </th>
                             <th> Actions </th>
                         </tr>
                     </thead>
@@ -33,6 +34,7 @@
                             <td th:text = "${student.lastName}"></td>
                             <td th:text = "${student.address}"></td>
                             <td th:text = "${student.email}"></td>
+                            <td th:text = "${student.gender}"></td>
                             <td>
                                 <a th:href = "@{/students/edit/{id}(id=${student.id})}"
                                 class = "btn btn-primary"> Update </a>
